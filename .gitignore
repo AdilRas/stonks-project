@@ -1,0 +1,16 @@
+# Virtualenv #
+stonks-project
+
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+media
+migrations/
+local_settings.py
+
+# Visual Studio Code # 
+.vscode/
+.history
