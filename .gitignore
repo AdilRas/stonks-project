@@ -1,5 +1,6 @@
 # Virtualenv #
 stonks-project
+*.env
 
 # Django #
 *.log
