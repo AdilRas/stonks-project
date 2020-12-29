@@ -1,7 +1,9 @@
-from django.urls import path
-from .views import main
+from django.urls import path, include
+from .views import TestView, StockView
 
 urlpatterns = [
-    path('', view=main)
+    path('api-auth/', include('rest_framework.urls')),
+    path('test/', TestView.as_view()),
+    path('stock/', StockView.as_view())
 ]
 

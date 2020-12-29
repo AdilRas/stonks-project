@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth import get_user_model
 
 # Create your models here.
 EXCHANGES = (
@@ -77,9 +78,6 @@ EXCHANGES = (
     ('BSX', 'BSX (Bermuda Stock Exchange)'),
 )
 class Stock(models.Model):
-    ticker = models.CharField(max_length=8, verbose_name="ticker symbol", unique=True)
+    ticker = models.CharField(max_length=8, verbose_name="ticker symbol", unique=True, primary_key=True)
     name = models.CharField(max_length=255)
     exchange = models.CharField(max_length=128, verbose_name="exchange", unique=False, choices=EXCHANGES)
-
-
-
